@@ -27,6 +27,7 @@ public class BookRepositoryTest {
 
 
     private static Long bookId;
+    private static String bookTitle;
 
     @Inject
     private BookRepository bookRepository;
@@ -72,6 +73,7 @@ public class BookRepositoryTest {
         assertNotNull(book);
         assertNotNull(book.getId());
         bookId = book.getId();
+        bookTitle = book.getTitle();
     }
 
     @Test
@@ -79,9 +81,11 @@ public class BookRepositoryTest {
     public void findBookTest() {
 
         Book bookFound = bookRepository.findBook(bookId);
+        List<Book> titleSearchBooks = bookRepository.findBook(bookTitle);
 
         assertNotNull(bookFound.getId());
         assertEquals("title", bookFound.getTitle());
+        assertEquals(bookRepository.getAllBooks().size(), titleSearchBooks.size());
     }
     
     @Test

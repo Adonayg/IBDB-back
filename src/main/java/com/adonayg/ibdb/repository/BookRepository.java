@@ -7,6 +7,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static javax.transaction.Transactional.TxType.REQUIRED;
 import static javax.transaction.Transactional.TxType.SUPPORTS;
@@ -23,6 +24,11 @@ public class BookRepository {
 
     public Book findBook(Long id) {
         return em.find(Book.class, id);
+    }
+    
+    public List<Book> findBook(String title) {
+    	List<Book> allBooks = getAllBooks();
+    	return allBooks.stream().filter( book -> book.getTitle().contains(title)).collect(Collectors.toList());
     }
 
     public List<Book> getAllBooks() {
