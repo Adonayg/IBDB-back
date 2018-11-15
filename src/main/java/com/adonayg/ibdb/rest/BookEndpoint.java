@@ -49,6 +49,7 @@ public class BookEndpoint {
 	}
 
 	@GET
+	@Path("/getBooks")
 	@Produces(APPLICATION_JSON)
 	public Response getBooks() {
 		List<Book> books = bookRepository.getAllBooks();
