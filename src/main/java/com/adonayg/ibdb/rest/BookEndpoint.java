@@ -16,6 +16,7 @@ import java.util.List;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
 
+@Path("/books")
 public class BookEndpoint {
 
 	@Inject

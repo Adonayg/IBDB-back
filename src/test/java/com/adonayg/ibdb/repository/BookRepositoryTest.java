@@ -66,8 +66,7 @@ public class BookRepositoryTest {
 
 		List<Book> publishersBooks = new ArrayList<Book>();
 		Publisher publisher = new Publisher("name", publishersBooks);
-    	Book book = new Book("isbn", "title", new Date(), "description", "body", publisher.getId(), "author", 5, 5, 5,
-				"imgUrl");
+    	Book book = new Book("isbn", "title", "description", "body", publisher.getId(), "author", 5,"imgUrl");
         book = bookRepository.createBook(book);
 
         assertNotNull(book);
