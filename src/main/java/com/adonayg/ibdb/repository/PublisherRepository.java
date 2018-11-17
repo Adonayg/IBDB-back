@@ -1,48 +1,73 @@
 package com.adonayg.ibdb.repository;
 
-import javax.transaction.Transactional;
-
-import com.adonayg.ibdb.domain.Publisher;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-
 import static javax.transaction.Transactional.TxType.REQUIRED;
 import static javax.transaction.Transactional.TxType.SUPPORTS;
 
-import java.util.List;
+import java.util.Collection;
+
+import javax.enterprise.inject.Default;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.transaction.Transactional;
+
+import com.adonayg.ibdb.domain.Publisher;
+import com.adonayg.ibdb.util.JSONConvert;
+
+
+
+
+// Class to add stuff to database
+
 
 @Transactional(SUPPORTS)
-public class PublisherRepository {
-
+@Default
+public class PublisherRepository{
+	
 	@PersistenceContext(unitName = "ibdbPU")
-	private EntityManager manager;
-
-	public Long publisherCount() {
-		TypedQuery<Long> query = manager.createQuery("SELECT COUNT(p) FROM Publisher p", Long.class);
-		return query.getSingleResult();
+	private EntityManager em;
+	
+	@Inject
+	private JSONConvert jsonConvert;
+	
+	
+	public String getAllPublishers() {
+		Query query = em.createQuery("Select a FROM Publisher a");
+		Collection<Publisher> publishers = (Collection<Publisher>) query.getResultList();
+		// Converting Object to JSON
+		return jsonConvert.getJSONForObject(publishers);
 	}
-
+	
+	
 	@Transactional(REQUIRED)
-	public Publisher createPublisher(Publisher publisher) {
-		manager.persist(publisher);
-		return publisher;
+	public String addPublisher(String publisher) {
+		Publisher aPublisher = jsonConvert.getObjectForJSON(publisher, Publisher.class);
+		em.persist(aPublisher);
+		return "{\"message\": \"publisher has been sucessfully added\"}";
 	}
-
-	public List<Publisher> getAllPublishers() {
-		TypedQuery<Publisher> query = manager.createQuery("SELECT p FROM Publisher p ORDER BY p.title DESC",
-				Publisher.class);
-		return query.getResultList();
-	}
-
-	public Publisher findPublisher(Long id) {
-		return manager.find(Publisher.class, id);
-	}
-
+	
+	
 	@Transactional(REQUIRED)
-	public void deletePublisher(Long id) {
-		manager.remove(manager.getReference(Publisher.class, id));
+	public String deletePublisher(Long id) {
+		Publisher publisherInDB = findPublisher(id);
+		if (publisherInDB != null) {
+			em.remove(publisherInDB);
+		}
+		return "{\"message\": \"publisher sucessfully deleted\"}";
 	}
+
+	private Publisher findPublisher(Long id) {
+		return em.find(Publisher.class, id);
+	}
+	
+	public void setManager(EntityManager em) {
+		this.em = em;
+	}
+	
+	public void setUtil(JSONConvert jsonConvert) {
+		this.jsonConvert = jsonConvert;
+	}
+
 
 }

@@ -18,7 +18,7 @@ public class BookRepository {
 
 
 
-    @PersistenceContext(unitName = "bookStorePU")
+    @PersistenceContext(unitName = "ibdbPU")
     private EntityManager em;
 
 
@@ -32,7 +32,7 @@ public class BookRepository {
     }
 
     public List<Book> getAllBooks() {
-        TypedQuery<Book> query = em.createQuery("SELECT b FROM Book b ORDER BY b.title DESC", Book.class);
+        TypedQuery<Book> query = em.createQuery("SELECT b FROM Book b ORDER BY b.id DESC", Book.class);
         return query.getResultList();
     }
 
@@ -63,4 +63,9 @@ public class BookRepository {
     	bookInDb.setBody(book.getBody());
     	return bookInDb;
     }
+    
+    
+	public void setManager(EntityManager em) {
+		this.em = em;
+	}
 }
