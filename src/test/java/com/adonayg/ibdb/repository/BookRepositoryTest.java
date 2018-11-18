@@ -1,6 +1,9 @@
 package com.adonayg.ibdb.repository;
 
-import com.adonayg.ibdb.domain.*;
+
+import com.adonayg.domain.Book;
+import com.adonayg.domain.Publisher;
+import com.adonayg.repository.BookRepository;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -15,7 +18,6 @@ import org.junit.runner.RunWith;
 import javax.inject.Inject;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -27,6 +29,7 @@ public class BookRepositoryTest {
 
 
     private static Long bookId;
+
 
     @Inject
     private BookRepository bookRepository;
@@ -65,8 +68,7 @@ public class BookRepositoryTest {
 
 		List<Book> publishersBooks = new ArrayList<Book>();
 		Publisher publisher = new Publisher("name", publishersBooks);
-    	Book book = new Book("isbn", "title", new Date(), "description", "body", publisher.getId(), "author", 5, 5, 5,
-				"imgUrl");
+    	Book book = new Book("isbn", "title", "description", "body", publisher.getId(), "author", 5,"imgUrl");
         book = bookRepository.createBook(book);
 
         assertNotNull(book);
