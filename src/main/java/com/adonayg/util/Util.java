@@ -1,6 +1,6 @@
 package com.adonayg.util;
 
-import javax.enterprise.inject.Model;
+
 
 import com.google.gson.Gson;
 
