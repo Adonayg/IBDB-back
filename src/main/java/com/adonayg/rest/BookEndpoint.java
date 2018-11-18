@@ -10,25 +10,32 @@ import javax.ws.rs.Produces;
 
 import com.adonayg.service.BookService;
 
-@Path("/book")
+@Path("/books")
 public class BookEndpoint {
 	
 	@Inject
 	private BookService service;
 
-	@Path("/getAllBooks")
 	@GET
 	@Produces({ "application/json" })
 	public String getAllBooks() {
 		return service.getAllBooks();
 	}
 	
-	@Path("/getBook/{id}")
+	@Path("/{id}")
 	@GET
 	@Produces({ "application/json" })
 	public String getBook(@PathParam("id") Long id) {
 		return service.getBook(id);
 	}
+	
+	@Path("/{title}")
+	@GET
+	@Produces({ "application/json" })
+	public String getBook(@PathParam("title") String title) {
+		return service.getBook(title);
+	}
+
 
 	@Path("/createBook")
 	@POST

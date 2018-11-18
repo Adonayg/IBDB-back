@@ -27,10 +27,6 @@ public class BookRepository {
         return em.find(Book.class, id);
     }
     
-    public List<Book> findBook(String title) {
-    	List<Book> allBooks = getAllBooks();
-    	return allBooks.stream().filter( book -> book.getTitle().contains(title)).collect(Collectors.toList());
-    }
 
     public List<Book> getAllBooks() {
         TypedQuery<Book> query = em.createQuery("SELECT b FROM Book b ORDER BY b.id DESC", Book.class);

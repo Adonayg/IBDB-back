@@ -1,5 +1,8 @@
 package com.adonayg.service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import javax.inject.Inject;
 
 import com.adonayg.domain.Book;
@@ -18,6 +21,13 @@ public class BookService {
 		bookRepository.createBook(util.getObjectForJSON(book, Book.class));
 		return "{\"message\": \"Book has been sucessfully added\"}"; 
 	}
+	
+	
+    public String getBook(String title) {
+    	List<Book> allBooks = bookRepository.getAllBooks();
+    	return util.getJSONForObject(allBooks.stream().filter( book -> book.getTitle().contains(title)).collect(Collectors.toList()));
+    }
+
 	
 	
 	public String getAllBooks() {
