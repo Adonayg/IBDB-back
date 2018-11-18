@@ -1,11 +1,15 @@
-package com.adonayg.ibdb.util;
+package com.adonayg.util;
+
+import javax.enterprise.inject.Model;
+
 import com.google.gson.Gson;
 
-public class JSONConvert {
+
+public class Util {
 
 	private Gson gson;
 
-	public JSONConvert() {
+	public Util() {
 		this.gson = new Gson();
 	}
 

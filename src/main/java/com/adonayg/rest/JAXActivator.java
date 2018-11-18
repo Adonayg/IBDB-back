@@ -1,4 +1,4 @@
-package com.adonayg.ibdb.rest;
+package com.adonayg.rest;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

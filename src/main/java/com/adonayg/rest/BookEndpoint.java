@@ -1,22 +1,33 @@
-package com.adonayg.ibdb.rest;
+package com.adonayg.rest;
 
 import javax.inject.Inject;
-import javax.ws.rs.*;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 
-import com.adonayg.ibdb.services.BookServices;
+import com.adonayg.service.BookService;
 
-
-@Path("/books")
+@Path("/book")
 public class BookEndpoint {
-
+	
 	@Inject
-	private BookServices service;
+	private BookService service;
 
 	@Path("/getAllBooks")
 	@GET
 	@Produces({ "application/json" })
 	public String getAllBooks() {
 		return service.getAllBooks();
+	}
+	
+	@Path("/getBook/{id}")
+	@GET
+	@Produces({ "application/json" })
+	public String getBook(@PathParam("id") Long id) {
+		return service.getBook(id);
 	}
 
 	@Path("/createBook")
@@ -33,15 +44,8 @@ public class BookEndpoint {
 		return service.deleteBook(id);
 	}
 
-	@Path("/getBook/{id}")
-	@GET
-	@Produces({ "application/json" })
-	public String getBook(@PathParam("id") Long id) {
-		return service.getBook(id);
-	}
-	public void setService(BookServices service) {
+	public void setService(BookService service) {
 		this.service = service;
 	}
-	
-}
 
+}

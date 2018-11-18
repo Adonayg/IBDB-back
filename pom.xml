@@ -43,7 +43,7 @@
 		</dependency>
 
 		<!-- TEST -->
-		<dependency>
+		<dependency>	
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${version.junit}</version>
