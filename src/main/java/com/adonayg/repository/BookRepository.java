@@ -29,7 +29,7 @@ public class BookRepository {
     
 
     public List<Book> getAllBooks() {
-        TypedQuery<Book> query = em.createQuery("SELECT b FROM Book b ORDER BY b.id DESC", Book.class);
+        TypedQuery<Book> query = em.createQuery("SELECT b FROM Book b", Book.class);
         return query.getResultList();
     }
 

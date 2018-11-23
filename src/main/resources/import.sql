@@ -1,11 +1,48 @@
-INSERT INTO PUBLISHER (id, name) VALUES (1, 'Publisher 1');
-INSERT INTO PUBLISHER (id, name) VALUES (2, 'Publisher 2');
-INSERT INTO PUBLISHER (id, name) VALUES (3, 'Publisher 3');
+INSERT INTO PUBLISHER (id, name) VALUES (1, 'Modern Library');
+INSERT INTO PUBLISHER (id, name) VALUES (2, 'Francisco de Robles');
+INSERT INTO PUBLISHER (id, name) VALUES (3, 'Penguin');
+INSERT INTO PUBLISHER (id, name) VALUES (4, 'Courier Corporation');
+INSERT INTO PUBLISHER (id, name) VALUES (5, 'Scribner');
+INSERT INTO PUBLISHER (id, name) VALUES (6, 'Bantam Classic');
+INSERT INTO PUBLISHER (id, name) VALUES (7, 'Grand Central Publishing');
+INSERT INTO PUBLISHER (id, name) VALUES (8, 'Cambridge University Press');
+INSERT INTO PUBLISHER (id, name) VALUES (9, 'Oxford University Press');
+INSERT INTO PUBLISHER (id, name) VALUES (10, 'Alfaguara');
+INSERT INTO PUBLISHER (id, name) VALUES (11, 'Createspace Independent Publishing Platform');
+INSERT INTO PUBLISHER (id, name) VALUES (12, 'Wordsworth Editions');
+INSERT INTO PUBLISHER (id, name) VALUES (13, 'Harper Collins');
+INSERT INTO PUBLISHER (id, name) VALUES (14, 'Pottermore Publishing');
 
 
-INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 1, 'author1', 'body1', 'desc1', 5, 'img1', 'isbn1',1, 'title1')
-INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 2, 'author2', 'body2', 'desc2', 5, 'img2', 'isbn2',1, 'title2')
-INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 3, 'author3', 'body3', 'desc3', 5, 'img3', 'isbn3',2, 'title3')
-INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 4, 'author4', 'body4', 'desc4', 5, 'img4', 'isbn4',2, 'title4')
-INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 5, 'author5', 'body5', 'desc5', 5, 'img5', 'isbn5',3, 'title5')
+
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 1, 'Jane Austen', 'body1', 'desc1', 5, 'http://books.google.com/books/content?id=OxlUqoQgaj4C&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0679783261',1, 'Pride and Prejudice')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 2, 'Miguel de Cervantes', 'body2', 'desc2', 5, 'http://books.google.com/books/content?id=8Tj2vQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0060934344',2, 'Don Quixote')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 3, 'James Joyce', 'body3', 'desc3', 5, 'http://books.google.com/books/content?id=HD3cW0XWvz0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', '0141182806',3, 'Ulysses')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 4, 'F. Scott Fitzgerald', 'body4', 'desc4', 5, 'http://books.google.com/books/content?id=eaLjDeMV_WsC&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0684801523',5, 'The Great Gatsby')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 5, 'Herman Melville', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=byc6aTO1EOMC&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0553213113',6, 'Moby-Dick')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 6, 'William Shakespeare', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=5m2UPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0521618746',8, 'Hamlet')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 7, 'Leo Tolstoy', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=9nxfsPujsYoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', '0192833987',9, 'War and Peace')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 8, 'Homer', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=gVK5kYT0qFcC&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0140268863',3, 'The Odyssey')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 9, 'Gabriel Garcia Marquez', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=ESeaAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api', '8420471836',10, 'One Hundred Years of Solitude')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 10, 'Dante Alighieri', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=gohkAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0451208633',3, 'The Divine Comedy')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 11, 'Ayn Rand', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=vtGzoVxe0REC&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0451163931',3, 'The Fountainhead')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 12, 'J. K. Rowling', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=zpvysRGsBlwC&printsec=frontcover&img=1&zoom=1&source=gbs_api', '1781100535',14, 'Harry Potter and the Order of the Phoenix')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 13, 'Daniel Defoe', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=3Um3rQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api', '150329238X',11, 'Robinson Crusoe')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 14, 'Jonathan Swift', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=91kkAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', '0486292738',4, 'Gulliver''s Travels')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 15, 'Henry Fielding', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=FWyzQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0199536996',9, 'Tom Jones')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 16, 'Samuel Richardson', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=oXZf_d18JI4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', '0140432159',3, 'Clarissa')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 17, 'Laurence Sterne', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=8Hk-C0nOly4C&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0141439777',3, 'Tristram Shandy')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 18, 'Pierre Choderlos De Laclos', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=4Ax6yoFlDnAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', '0140449574',3, 'Dangerous Liaisons')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 19, 'Jane Austen', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=6-ndr-0EMycC&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0141439580',3, 'Emma')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 20, 'Mary Shelley', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=31h2CQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', '0486282112',4, 'Frankenstein')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 21, 'Thomas Love Peacock', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=zPyKNQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0140430458',3, 'Nightmare Abbey')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 22, 'Honoré De Balzac', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=E7WaaxaiSVkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', '0140442375',3, 'The Black Sheep')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 23, 'Stendhal', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=S3P2ZLw3SkYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', '0140449663',3, 'The Charterhouse of Parma')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 24, 'Alexandre Dumas', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=kLZg3grRVZsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', '0140449264',3, 'The Count of Monte Cristo')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 25, 'Benjamin Disrael', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=wOxdPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0446550124',7, 'Sybil')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 26, 'Charles Dickens', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=vhOJQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0140439447',3, 'David Copperfield')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 27, 'Emily Brontë', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=Io00-b-Dp00C&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0141439556',3, 'Wuthering Heights')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 28, 'William Makepeace Thackeray', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=HZn7ZvWydKQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', '1853260193',12, 'Vanity Fair')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 29, 'Paulo Coelho', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=FEL8DlqjYEkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', '0061741248',13, 'The Alchemist')
+INSERT INTO BOOK (ID, AUTHOR , BODY , DESCRIPTION , IBDB_RATING , IMAGE_URL , ISBN , PUBLISHER_ID , TITLE ) VALUES ( 30, 'Albert Camus', 'body5', 'desc5', 5, 'http://books.google.com/books/content?id=E4-rnAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api', '0061741248',3, 'The Outsider')
 
